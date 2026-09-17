@@ -1,0 +1,757 @@
+---
+# Front matter required so Jekyll processes this file
+---
+
+@charset "utf-8";
+
+/*
+   Look & feel modeled on pages.cs.wisc.edu/~sharonli: PT Sans Narrow headings,
+   PT Serif body, uppercase nav, dotted-underline links. Theme variables must be
+   set before the imports below.
+   ========================================================================== */
+
+$serif: "PT Serif", Georgia, Times, serif;
+$sans-serif-narrow: "PT Sans Narrow", "Arial Narrow", sans-serif;
+$global-font-family: $serif;
+$header-font-family: $sans-serif-narrow;
+
+$doc-font-size: 16px;
+$doc-font-size-medium: 16px;
+$doc-font-size-large: 17px;
+$doc-font-size-x-large: 17px;
+
+/* Dark mode: black background, white text */
+$background-color: #000;
+$text-color: #fff;
+$ink: #d4d4d4; // secondary links: sidebar, [PDF] / [Code]
+$ink-hover: #fff;
+$muted-text-color: #9a9a9a;
+$border-color: #2a2a2a;
+$primary-color: #444;
+$code-background-color: #111;
+$code-background-color-dark: #1a1a1a;
+$form-background-color: #111;
+$footer-background-color: #000;
+$link-color: #3bb9ff;
+$link-color-hover: #8fd6ff;
+$link-color-visited: $link-color;
+$link-underline: #555;
+$award-color: #ff6b5b;
+$masthead-link-color: #fff;
+$masthead-link-color-hover: $link-color;
+$navicon-link-color-hover: #222;
+$intro-transition: none;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* Dark scrollbars and form controls */
+html {
+  color-scheme: dark;
+}
+
+/* Text highlight. The theme's default (white on black) is invisible on our
+   black background. */
+::-moz-selection {
+  color: #fff;
+  background: rgba($link-color, 0.45);
+}
+
+::selection {
+  color: #fff;
+  background: rgba($link-color, 0.45);
+}
+
+/*
+   Layout: let the content column fill the width (the theme reserves a right
+   gutter for a table of contents, which we don't use)
+   ========================================================================== */
+
+.page {
+  @include breakpoint($large) {
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-inline-end: 0;
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+    padding-inline-end: 0;
+  }
+}
+
+/*
+   Masthead
+   ========================================================================== */
+
+.masthead {
+  border-bottom: none;
+}
+
+.masthead__inner-wrap {
+  padding-top: 1.5em;
+}
+
+.greedy-nav {
+  a {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  /* The name: large, top left, the focal point of the header */
+  a.site-title {
+    font-size: 2.1em;
+    line-height: 1;
+    text-transform: none;
+    color: $masthead-link-color;
+
+    @include breakpoint($large) {
+      font-size: 2.25em;
+    }
+
+    @include breakpoint($x-large) {
+      font-size: 2.5em;
+    }
+
+    &:hover {
+      color: $masthead-link-color;
+    }
+  }
+
+  .visible-links a:before {
+    background: $ink;
+  }
+
+  /* On desktop, the site title spans the sidebar column so the nav links
+     start where the page content starts */
+  @include breakpoint($large) {
+    .site-title {
+      min-width: $right-sidebar-width-narrow;
+      margin-inline-end: 0;
+    }
+
+    .visible-links {
+      justify-content: flex-start;
+
+      li:first-child a {
+        margin-inline-start: 0;
+      }
+    }
+  }
+
+  @include breakpoint($x-large) {
+    .site-title {
+      min-width: $right-sidebar-width;
+    }
+  }
+}
+
+/*
+   Sidebar
+   ========================================================================== */
+
+.sidebar {
+  opacity: 1;
+
+  @include breakpoint($large) {
+    opacity: 1;
+  }
+}
+
+.author-card {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+
+  @include breakpoint($large) {
+    display: block;
+  }
+
+  a {
+    color: $ink;
+    text-decoration: none;
+  }
+}
+
+.author-card__photo {
+  flex-shrink: 0;
+
+  img {
+    display: block;
+    width: 96px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+
+    @include breakpoint($large) {
+      width: 100%;
+      max-width: 190px;
+    }
+  }
+}
+
+.sidebar .author-card__lines {
+  margin: 0 0 0.75em;
+  font-family: $serif;
+  font-size: 0.85em;
+  line-height: 1.4;
+
+  @include breakpoint($large) {
+    margin-top: 1em;
+  }
+
+  a {
+    color: $link-color;
+  }
+}
+
+.author-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 1em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint($large) {
+    display: block;
+  }
+
+  .sidebar & li {
+    margin-bottom: 0.2em;
+    font-family: $serif;
+    font-size: 0.8em;
+  }
+
+  a:hover {
+    color: $ink-hover;
+  }
+}
+
+/*
+   Content
+   ========================================================================== */
+
+/* Heading scale: name (masthead) > page title > section headings */
+.page__title {
+  margin-bottom: 0.6em;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.1;
+
+  @include breakpoint($large) {
+    font-size: 2.25em;
+  }
+}
+
+.page__content {
+  h2 {
+    margin-top: 1.5em;
+    padding-bottom: 0;
+    border-bottom: none;
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  a:not(.btn) {
+    color: $link-color;
+    text-decoration: none;
+    border-bottom: 1px dotted $link-underline;
+
+    &:hover {
+      color: $link-color-hover;
+      border-bottom-style: solid;
+    }
+  }
+}
+
+/* Recent news: dated lines, no bullets */
+.news {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 0.2em;
+  }
+}
+
+/* Publications, experience, projects: bulleted entries with stacked lines */
+.biblist {
+  li {
+    margin-bottom: 1.1em;
+    line-height: 1.45;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .venue {
+    font-style: italic;
+  }
+
+  .award {
+    font-style: normal;
+    font-weight: bold;
+    color: $award-color;
+  }
+
+  .details {
+    margin: 0.3em 0 0;
+    font-size: 0.9em;
+
+    li {
+      margin-bottom: 0.2em;
+    }
+  }
+
+  /* [PDF] / [Code] style links are muted rather than blue, like the example site */
+  .links a:not(.btn) {
+    color: $ink;
+
+    &:hover {
+      color: $ink-hover;
+    }
+  }
+}
+
+/* Publications: first-page thumbnail on the left, details on the right */
+.pub-intro {
+  margin-bottom: 1.75em;
+}
+
+.pub {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  margin-bottom: 1.75em;
+
+  @include breakpoint($medium) {
+    gap: 1.5em;
+  }
+}
+
+.page__content .pub a.pub__thumb {
+  flex: 0 0 84px;
+  border-bottom: none;
+
+  @include breakpoint($medium) {
+    flex-basis: 120px;
+  }
+
+  img,
+  .pub__placeholder {
+    display: block;
+    width: 100%;
+    aspect-ratio: 772 / 1000;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px #333;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &:hover img,
+  &:hover .pub__placeholder {
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 1px $link-color;
+  }
+}
+
+.pub__placeholder {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: #141414;
+  color: #555;
+  font-size: 1.75em;
+}
+
+.pub__body {
+  min-width: 0;
+  line-height: 1.45;
+}
+
+.page__content .pub a.pub__title {
+  display: block;
+  margin-bottom: 0.3em;
+  border-bottom: none;
+  color: $text-color;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.3;
+
+  &:hover {
+    color: $link-color;
+  }
+}
+
+.pub__line {
+  display: block;
+  font-size: 0.9em;
+}
+
+.pub__venue {
+  font-style: italic;
+}
+
+.pub__award {
+  font-style: normal;
+  font-weight: bold;
+  color: $award-color;
+}
+
+.page__content .pub__links a {
+  color: $ink;
+
+  &:hover {
+    color: $ink-hover;
+  }
+}
+
+/* [BibTeX] is a button, styled to match the [PDF] / [Code] links */
+.pub__bibtex-toggle {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px dotted $link-underline;
+  background: none;
+  color: $ink;
+  font: inherit;
+  cursor: pointer;
+
+  &:hover,
+  &[aria-expanded="true"] {
+    color: $ink-hover;
+    border-bottom-style: solid;
+  }
+}
+
+.pub__bibtex {
+  position: relative;
+  margin-top: 0.6em;
+
+  pre {
+    margin: 0;
+    padding: 0.9em 1em;
+    overflow-x: auto;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background: #111;
+    color: $ink;
+    font-size: 0.72em;
+    line-height: 1.5;
+    white-space: pre;
+  }
+}
+
+.pub__bibtex-copy {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  padding: 0.2em 0.7em;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  background: #1a1a1a;
+  color: $ink;
+  font-family: $sans-serif-narrow;
+  font-size: 0.75em;
+  cursor: pointer;
+
+  &:hover {
+    color: $ink-hover;
+    border-color: #555;
+  }
+}
+
+/* Experience: selected work */
+.highlights {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 1.2em;
+    padding-left: 1em;
+    border-left: 2px solid #262626;
+    line-height: 1.45;
+  }
+}
+
+.highlight__title {
+  display: block;
+  font-weight: bold;
+}
+
+.highlight__org {
+  margin-left: 0.6em;
+  color: $muted-text-color;
+  font-family: $sans-serif-narrow;
+  font-size: 0.75em;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.highlight__desc {
+  display: block;
+  color: $ink;
+  font-size: 0.92em;
+}
+
+/* Links sit inline at the end of the description */
+.highlight__links {
+  display: inline;
+  white-space: nowrap;
+}
+
+/* Read by screen readers, invisible on screen */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Experience: timeline of roles and education */
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 0.15em 0.9em;
+  padding-bottom: 1.6em;
+
+  /* connecting line between logos */
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 78px;
+    bottom: 0;
+    left: 35px;
+    width: 1px;
+    background: #262626;
+  }
+
+  @include breakpoint($medium) {
+    grid-template-columns: 72px 130px 1fr;
+  }
+}
+
+/* A later role at the same employer: no logo, no repeated company name, so the
+   line runs the full height instead of starting below a logo */
+.timeline__item--cont {
+  margin-top: -0.9em;
+
+  &:not(:last-child)::before {
+    top: 0;
+  }
+}
+
+/* Company / school logo, sized to read on the dark background on its own */
+.timeline__mark {
+  display: flex;
+  grid-row: 1;
+  grid-column: 1;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.timeline__dates {
+  grid-row: 1;
+  grid-column: 2;
+  align-self: center;
+  color: $muted-text-color;
+  font-family: $sans-serif-narrow;
+  font-size: 0.8em;
+  letter-spacing: 0.02em;
+}
+
+.timeline__body {
+  grid-column: 2;
+  line-height: 1.45;
+
+  @include breakpoint($medium) {
+    grid-row: 1;
+    grid-column: 3;
+  }
+}
+
+.timeline__org {
+  display: block;
+  font-weight: bold;
+}
+
+.timeline__role {
+  display: block;
+  color: $ink;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.timeline__summary {
+  display: block;
+  margin-top: 0.45em;
+  color: $ink;
+  font-size: 0.9em;
+}
+
+/* Projects: card grid, one column on phones, two on wider screens */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #222;
+  border-radius: 8px;
+  background: #0b0b0b;
+  transition: border-color 0.15s ease-out, transform 0.15s ease-out;
+
+  &:hover {
+    border-color: #3a3a3a;
+    transform: translateY(-2px);
+  }
+}
+
+.page__content .project-card__media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid #1c1c1c;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+  }
+}
+
+/* Beat the dotted underline that content links get */
+.page__content a.project-card__media {
+  border-bottom: 1px solid #1c1c1c;
+}
+
+.project-card:hover .project-card__media img {
+  transform: scale(1.03);
+}
+
+/* Icon tile for projects without an image; --accent is set per project */
+.project-card__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%),
+    linear-gradient(135deg, #131313, #080808);
+  color: var(--accent);
+  font-size: 4.5em;
+
+  i {
+    filter: drop-shadow(0 0 18px color-mix(in srgb, var(--accent) 55%, transparent));
+  }
+}
+
+.project-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1em 1.1em 1.1em;
+  line-height: 1.45;
+}
+
+.page__content .project-card__title {
+  margin: 0 0 0.4em;
+  font-family: $serif;
+  font-size: 1.05em;
+  line-height: 1.3;
+
+  a {
+    border-bottom: none;
+    color: $text-color;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+.page__content .project-card__desc {
+  margin: 0 0 0.8em;
+  color: $ink;
+  font-size: 0.88em;
+}
+
+.page__content .project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin: 0 0 0.8em;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0.1em 0.6em;
+    border: 1px solid #2c2c2c;
+    border-radius: 999px;
+    color: $muted-text-color;
+    font-family: $sans-serif-narrow;
+    font-size: 0.75em;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Links sit at the bottom so cards in a row line up */
+.project-card__links {
+  margin-top: auto;
+  font-size: 0.88em;
+}
+
+/* Resume */
+.resume-embed {
+  width: 100%;
+  height: 80vh;
+  margin-top: 1em;
+  border: 1px solid $border-color;
+}
+
+/* Footer */
+.page__footer {
+  border-top: 1px solid $border-color;
+}

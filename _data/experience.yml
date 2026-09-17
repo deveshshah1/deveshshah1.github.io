@@ -1,0 +1,67 @@
+# Experience page content. Rendered by _pages/experience.md.
+#   highlights: selected work, shown above the timeline
+#   roles:      one entry per position; `logo` is a file in assets/images/logos/
+#   education:  shown at the bottom
+
+highlights:
+  - title: "Large Spectral Model (LSM)"
+    org: "Matterworks"
+    description: "A multimodal foundation model for mass spectrometry, built for predictive biology tasks, ingesting MS1/MS2 spectra and text metadata. Self-supervised pretraining on 1M+ samples with 100M-point inputs, scaled with multi-GPU model parallelism."
+
+  - title: "LSM-MS2"
+    org: "Matterworks"
+    description: "A transformer-based architecture for MS2 retrieval and generative lipid identification across 100K+ analytes, achieving state-of-the-art results on the MassSpecGym benchmark. Trained with a joint curriculum and contrastive learning strategy to separate structurally similar molecules."
+    links:
+      - label: arXiv
+        url: https://arxiv.org/abs/2510.26715
+
+  - title: "Generative AI for materials discovery"
+    org: "Ford"
+    description: "A closed-loop platform pairing GANs with latent space optimization and process-structure models to propose new microstructures for new polymers, using differential augmentation for training with limited data."
+    links:
+      - label: NeurIPS Workshop Spotlight
+        url: https://openreview.net/pdf?id=Uq6zOVUlKKo
+
+  - title: "Geometric deep learning for atomistic simulation"
+    org: "Ford & UW-Madison"
+    description: "Geodesic convolutions and graph neural networks over atomic structure, for both predictive and generative tasks. Applied across molecular dynamics simulations of materials and quantum mechanical (DFT) simulations of battery chemistry."
+
+roles:
+  - org: "Matterworks"
+    logo: matterworks.png
+    role: "Senior Machine Learning Scientist"
+    location: "New York, NY (Remote)"
+    dates: "Apr 2024 – Present"
+    summary: "Lead foundation model research; grew the ML team from 3 to 8 through Series A, reporting to the CTO."
+
+  - org: "Matterworks"
+    logo: matterworks.png
+    role: "Machine Learning Scientist"
+    location: "Boston, MA"
+    dates: "Oct 2023 – Apr 2024"
+    summary: "Joined as the third ML researcher post-seed, owning quantification models and company-wide data QC standards."
+
+  - org: "Ford Motor Company"
+    logo: ford.png
+    role: "Machine Learning Research Scientist"
+    location: "Detroit, MI"
+    dates: "Jan 2022 – Jun 2023"
+    summary: "Generative models for materials discovery, synthetic data for perception, and graph neural networks for battery materials."
+
+  - org: "ExxonMobil Research & Engineering"
+    logo: exxonmobil.png
+    role: "Process Modeling & Simulation Engineer"
+    location: "Houston, TX"
+    dates: "Aug 2018 – Jun 2020"
+    summary: "Compositional kinetic and thermal modeling to support refinery sites globally, providing process estimates, troubleshooting advice, and optimization studies. Led a hydroprocessing reactor revamp, modeling catalytic deactivation on heavy feeds to predict catalyst life, delivering $60M in savings."
+
+education:
+  - school: "University of Wisconsin - Madison"
+    logo: wisconsin.png
+    degree: "M.S. in Computer Science, Specialization in Machine Learning"
+    dates: "Dec 2021"
+
+  - school: "University of Michigan - Ann Arbor"
+    logo: michigan.png
+    degree: "B.S.E. in Chemical Engineering, Minor in Computer Science"
+    dates: "May 2018"

@@ -1,0 +1,68 @@
+# Personal projects, in display order. Rendered as cards by _pages/projects.md.
+#   image:  card image in assets/images/projects/ (1200x750, 16:10)
+#   icon:   used instead of an image: a Font Awesome class shown on a tinted tile
+#   accent: tile/icon color when using `icon`
+#   tags:   short chips under the description
+#   links:  the first link is also used for the image and title
+
+- title: "Physics-Informed Neural Networks for Navier-Stokes Vortex Shedding"
+  description: "PINNs on the Schäfer-Turek cylinder benchmarks at Re=20 and Re=100, studying how training interventions interact and diagnosing a failure mode at higher Reynolds number."
+  image: pinn-vortex-shedding.jpg
+  tags: [PINNs, CFD, Scientific ML]
+  links:
+    - label: Code
+      url: https://github.com/deveshshah1/Navier_Stokes_Exploration_with_PINNs
+    - label: Paper
+      url: https://arxiv.org/abs/2608.19632
+
+- title: "Out-of-Distribution Detection for Plant Pathology"
+  description: "A systematic evaluation of OOD detection methods on real-world apple leaf disease images, spanning post-hoc softmax scoring, auxiliary objectives, energy-based fine-tuning, and constrained optimization."
+  image: ood-plant-pathology.jpg
+  tags: [OOD Detection, Computer Vision]
+  links:
+    - label: Code
+      url: https://github.com/deveshshah1/Out_Of_Distribution_Exploration
+    - label: Paper
+      url: https://arxiv.org/abs/2605.08618
+
+- title: "Analyzing Localization Abilities of Vision Transformers"
+  description: "Extends Grad-CAM beyond CNNs to vision transformers and to the object detection domain, the first work to do so to our knowledge. Compares where ResNet, DeiT, YOLOv3, and DETR attend when classifying and detecting objects."
+  image: vit-attention.jpg
+  tags: [Vision Transformers, Interpretability]
+  links:
+    - label: Paper
+      url: https://drive.google.com/file/d/1umH4IodL5bJUNDVfnY-qDoeYELEcy7dR/view?usp=sharing
+
+- title: "CNN-Based Discovery of Transcription Factor Binding Sites in DNA"
+  description: "Deep learning models that identify protein-binding motifs in DNA, with saliency maps showing which bases drive each prediction."
+  image: dna-saliency.jpg
+  tags: [Genomics, CNNs, Saliency Maps]
+  links:
+    - label: Code
+      url: https://github.com/deveshshah1/Deep_Learning_Discovery_Of_Transcription_Factor_Binding_Sites_in_DNA
+
+- title: "Unhinged: Settle It"
+  description: "An iOS app (currently on the App Store) for friend groups who settle arguments with data: create a prediction about anything and let everyone weigh in with their pick."
+  image: unhinged.jpg
+  tags: [iOS, React Native, Supabase]
+  links:
+    - label: App Store
+      url: https://apps.apple.com/us/app/unhinged-settle-it/id6789410356
+
+- title: "Low-Rank Adaptation (LoRA)"
+  description: "A from-scratch implementation of LoRA fine-tuning, with notebooks walking through the math and an IMDB classification example."
+  icon: "fa-solid fa-sliders"
+  accent: "#3ddc97"
+  tags: [LLM Fine-Tuning, Transformers]
+  links:
+    - label: Code
+      url: https://github.com/deveshshah1/low_rank_adaptation_LoRA
+
+- title: "PyTorch Experimental Framework"
+  description: "Reusable PyTorch templates for autoencoders, VAEs, GANs, transfer learning, and custom CNNs. Covers various optimizers, learning-rate schedulers, and hyperparameter sweeps tracked in TensorBoard."
+  icon: "fa-solid fa-fire"
+  accent: "#ff8a50"
+  tags: [PyTorch, TensorBoard, Hyperparameter Tuning]
+  links:
+    - label: Code
+      url: https://github.com/deveshshah1/Pytorch_Base_Format

@@ -1,0 +1,155 @@
+# Publications, in display order (most important first, matching the resume).
+# Rendered by _pages/publications.md.
+#   authors: resume style ("Last, First; ...; et al."); "Shah, Devesh" is bolded automatically
+#   image:   first-page thumbnail in assets/images/papers/ (omit for a placeholder)
+#   links:   one [PDF] (OpenReview/IEEE if available, else arXiv/bioRxiv), plus [Code] if public.
+#            The first link is also used for the thumbnail and title.
+#   award:   optional badge shown after the venue
+#   bibtex:  shown by the [BibTeX] toggle. Sources: arXiv's export, DOI metadata
+#            (IEEE, bioRxiv), and OpenReview's citation format.
+
+- title: "LSM-MS2: A Foundation Model Bridging Spectral Identification and Biological Interpretation"
+  authors: "Asher, Gabriel*; Shah, Devesh*; et al."
+  venue: "arXiv preprint arXiv:2510.26715, 2025"
+  image: lsm-ms2.jpg
+  links:
+    - label: PDF
+      url: https://arxiv.org/abs/2510.26715
+  bibtex: |
+    @misc{asher2025lsmms2,
+      title         = {LSM-MS2: A Foundation Model Bridging Spectral Identification and Biological Interpretation},
+      author        = {Gabriel Asher and Devesh Shah and Amy A. Caudy and Luke Ferro and Lea Amar and Ana S. H. Costa and Thomas Patton and Niall O'Connor and Jennifer M. Campbell and Jack Geremia},
+      year          = {2025},
+      eprint        = {2510.26715},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.LG},
+      url           = {https://arxiv.org/abs/2510.26715}
+    }
+
+- title: "A Survey on Evaluation Metrics for Synthetic Material Micro-Structure Images from Generative Models"
+  authors: "Shah, Devesh; Suresh, Anirudh; et al."
+  venue: "NeurIPS Workshop on AI for Accelerated Materials Design (<b>NeurIPS AI4Mat</b>), 2022"
+  award: Spotlight
+  image: microstructure-metrics-survey.jpg
+  links:
+    - label: PDF
+      url: https://openreview.net/pdf?id=Uq6zOVUlKKo
+  bibtex: |
+    @inproceedings{shah2022survey,
+      title     = {A Survey on Evaluation Metrics for Synthetic Material Micro-Structure Images from Generative Models},
+      author    = {Devesh Shah and Anirudh Suresh and Alemayehu Admasu and Devesh Upadhyay and Kalyanmoy Deb},
+      booktitle = {AI for Accelerated Materials Design NeurIPS 2022 Workshop},
+      year      = {2022},
+      url       = {https://openreview.net/forum?id=Uq6zOVUlKKo}
+    }
+
+- title: "Multi-Objective Evolutionary Design of Microstructures using Diffusion Autoencoders"
+  authors: "Suresh, Anirudh; Shah, Devesh; et al."
+  venue: "NeurIPS Workshop on AI for Accelerated Materials Design (<b>NeurIPS AI4Mat</b>), 2023"
+  image: microstructure-evolutionary-design.jpg
+  links:
+    - label: PDF
+      url: https://openreview.net/pdf?id=SKo0sLvaJH
+  bibtex: |
+    @inproceedings{suresh2023multiobjective,
+      title     = {Multi-objective Evolutionary Design of Microstructures using Diffusion Autoencoders},
+      author    = {Anirudh Suresh and Devesh Shah and Alemayehu Admasu and Devesh Upadhyay and Kalyanmoy Deb},
+      booktitle = {AI for Accelerated Materials Design NeurIPS 2023 Workshop},
+      year      = {2023},
+      url       = {https://openreview.net/forum?id=SKo0sLvaJH}
+    }
+
+- title: "Complementary, Not Cumulative: Interaction Effects in Physics-Informed Neural Networks for Navier-Stokes Vortex Shedding"
+  authors: "Shah, Devesh"
+  venue: "arXiv preprint arXiv:2608.19632, 2026"
+  image: pinn-vortex-shedding.jpg
+  links:
+    - label: PDF
+      url: https://arxiv.org/abs/2608.19632
+    - label: Code
+      url: https://github.com/deveshshah1/Navier_Stokes_Exploration_with_PINNs
+  bibtex: |
+    @misc{shah2026complementary,
+      title         = {Complementary, Not Cumulative: Interaction Effects in Physics-Informed Neural Networks for Navier-Stokes Vortex Shedding},
+      author        = {Devesh Shah},
+      year          = {2026},
+      eprint        = {2608.19632},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.LG},
+      url           = {https://arxiv.org/abs/2608.19632}
+    }
+
+- title: "Beyond Toy Benchmarks: A Systematic Evaluation of OOD Detection Methods For Plant Pathology Classification"
+  authors: "Shah, Devesh"
+  venue: "arXiv preprint arXiv:2605.08618, 2026"
+  image: ood-plant-pathology.jpg
+  links:
+    - label: PDF
+      url: https://arxiv.org/abs/2605.08618
+    - label: Code
+      url: https://github.com/deveshshah1/Out_Of_Distribution_Exploration
+  bibtex: |
+    @misc{shah2026beyond,
+      title         = {Beyond Toy Benchmarks: A Systematic Evaluation of OOD Detection Methods For Plant Pathology Classification},
+      author        = {Devesh Shah},
+      year          = {2026},
+      eprint        = {2605.08618},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.CV},
+      url           = {https://arxiv.org/abs/2605.08618}
+    }
+
+- title: "Using Simulation to Quantify the Performance of Automotive Perception Systems"
+  authors: "Liu, Zhenyi; Shah, Devesh; et al."
+  venue: "arXiv preprint arXiv:2303.00983, 2023"
+  image: automotive-perception-simulation.jpg
+  links:
+    - label: PDF
+      url: https://arxiv.org/abs/2303.00983
+  bibtex: |
+    @misc{liu2023simulation,
+      title         = {Using Simulation to Quantify the Performance of Automotive Perception Systems},
+      author        = {Zhenyi Liu and Devesh Shah and Alireza Rahimpour and Devesh Upadhyay and Joyce Farrell and Brian A. Wandell},
+      year          = {2023},
+      eprint        = {2303.00983},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.CV},
+      url           = {https://arxiv.org/abs/2303.00983}
+    }
+
+- title: "ISETHDR: A Physics-Based Synthetic Radiance Dataset for High Dynamic Range Driving Scenes"
+  authors: "Liu, Zhenyi; Shah, Devesh; et al."
+  venue: "IEEE Sensors Journal (<b>IEEE Sensors</b>), vol. 25, no. 9, 2025"
+  image: isethdr.jpg
+  links:
+    - label: PDF
+      url: https://ieeexplore.ieee.org/document/10930435
+  bibtex: |
+    @article{liu2025isethdr,
+      title   = {ISETHDR: A Physics-Based Synthetic Radiance Dataset for High Dynamic Range Driving Scenes},
+      author  = {Zhenyi Liu and Devesh Shah and Brian A. Wandell},
+      journal = {IEEE Sensors Journal},
+      volume  = {25},
+      number  = {9},
+      pages   = {15261--15269},
+      year    = {2025},
+      month   = may,
+      doi     = {10.1109/JSEN.2025.3550455}
+    }
+
+- title: "A Scalable Approach to Absolute Quantitation in Metabolomics"
+  authors: "Ferro, Luke S.; et al."
+  venue: "bioRxiv preprint 2024.09.09.609906, 2024"
+  image: metabolomics-quantitation.jpg
+  links:
+    - label: PDF
+      url: https://www.biorxiv.org/content/10.1101/2024.09.09.609906v1
+  bibtex: |
+    @article{ferro2024scalable,
+      title   = {A Scalable Approach to Absolute Quantitation in Metabolomics},
+      author  = {Luke S. Ferro and Alan Y. L. Wong and Jack Howland and Ana S. H. Costa and Jefferson G. Pruyne and Devesh Shah and Joshua D. Lauterbach and Steven B. Hooper and Mimoun Cadosch Delmar and Jack Geremia and Timothy Kassis and Naama Kanarek and Jennifer M. Campbell},
+      journal = {bioRxiv},
+      year    = {2024},
+      month   = sep,
+      doi     = {10.1101/2024.09.09.609906}
+    }

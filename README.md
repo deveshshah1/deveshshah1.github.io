@@ -1,27 +1,29 @@
-# Minimal Mistakes remote theme starter
+# deveshshah1.github.io
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+Personal site for Devesh Shah, built with Jekyll and the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) remote theme. Pushing to `master` deploys to <https://deveshshah1.github.io> via GitHub Pages.
 
-Contains basic configuration to get you a site with:
+## Where things live
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+| Page | File |
+| --- | --- |
+| About (home) | `index.md` |
+| Experience | `_pages/experience.md` |
+| Publications | `_data/publications.yml` (content), `_pages/publications.md` (layout) |
+| Projects | `_data/projects.yml` (content), `_pages/projects.md` (card layout) |
+| Resume | `_pages/resume.md` (PDF at `assets/files/Devesh_Shah_Resume.pdf`) |
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+- Sidebar photo, title lines, and social links: `_config.yml` → `author` (markup in `_includes/author-profile.html`)
+- Top nav: `_data/navigation.yml`
+- Fonts and styles (modeled on [Sharon Li's page](https://pages.cs.wisc.edu/~sharonli/)): `_includes/head/custom.html`, `assets/css/main.scss`
+- To add a publication or project, copy an existing entry in its `_data/*.yml` file (each file's header explains the fields)
+- Images: headshot `assets/images/bio-photo.jpg`, paper thumbnails `assets/images/papers/`, project cards `assets/images/projects/` (1200×750)
 
----
+## Local preview
 
-## Troubleshooting
+```bash
+bundle config set --local path vendor/bundle
+bundle install
+LANG=en_US.UTF-8 bundle exec jekyll serve --livereload
+```
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
-
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+Then open <http://localhost:4000>. `LANG` must be UTF-8, or Sass fails on the theme's non-ASCII characters.

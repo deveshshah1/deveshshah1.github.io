@@ -1,51 +1,53 @@
-# ===== Minimal Mistakes starter config, pre-filled =====
-# Replace "deveshshah1" everywhere below with your actual GitHub username.
+remote_theme: "mmistakes/minimal-mistakes@4.28.1"
+minimal_mistakes_skin: "dark" # colors are further customized in assets/css/main.scss
 
-theme: minimal-mistakes-jekyll
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default" # try: air, contrast, dark, dirt, neon, mint, plum, sunrise
-
-title: "Devesh"
-name: "Devesh"
+locale: "en-US"
+title: "Devesh Shah"
+name: "Devesh Shah"
 description: "ML Scientist at the intersection of AI × Science"
 url: "https://deveshshah1.github.io"
 baseurl: ""
+repository: "deveshshah1/deveshshah1.github.io"
+search: false
+atom_feed:
+  hide: true
 
 # Author sidebar (appears on every page)
 author:
-  name: "Devesh"
-  bio: "Senior Machine Learning Scientist at Matterworks, building AI systems for mass spectrometry data. Background spanning ML research, automotive AI, and process engineering."
-  location: "Boston, MA"
+  name: "Devesh Shah"
+  avatar: "/assets/images/bio-photo.jpg"
+  # Italic lines under the photo in the sidebar (see _includes/author-profile.html).
+  # Each line can also take a `url`.
+  lines:
+    - text: "Machine Learning Scientist"
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/deveshshah1"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-fw fa-square-github"
       url: "https://github.com/deveshshah1"
-    - label: "arXiv"
-      icon: "fas fa-fw fa-scroll"
-      url: "https://arxiv.org/a/deveshshah1"
-    # - label: "LinkedIn"
-    #   icon: "fab fa-fw fa-linkedin"
-    #   url: "https://linkedin.com/in/deveshshah1"
-    # - label: "Email"
-    #   icon: "fas fa-fw fa-envelope"
-    #   url: "mailto:you@example.com"
-
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/deveshshah1"
+    - label: "Google Scholar"
+      icon: "fab fa-fw fa-google-scholar"
+      url: "https://scholar.google.com/citations?user=gtrEO34AAAAJ&hl=en"
+    - label: "e-Mail"
+      icon: "fas fa-fw fa-square-envelope"
+      url: "mailto:deveshs@umich.edu"
 
 # Build settings
 markdown: kramdown
-paginate: 5
-paginate_path: /page:num/
 
 include:
   - _pages
 
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
 plugins:
-  - jekyll-paginate
+  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-include-cache
 
@@ -56,13 +58,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: false
-      share: true
-      related: true
