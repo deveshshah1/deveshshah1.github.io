@@ -32,28 +32,28 @@ roles:
     role: "Senior Machine Learning Scientist"
     location: "New York, NY (Remote)"
     dates: "Apr 2024 – Present"
-    summary: "Lead foundation model research; grew the ML team from 3 to 8 through Series A, reporting to the CTO."
+    summary: "Lead foundation model research across software, ML engineering, and chemistry teams, from architecture design and pretraining through integration and customer deployment. Grew the research team from 3 to 8 through Series A, designing the hiring process and reporting to the CTO."
 
   - org: "Matterworks"
     logo: matterworks.png
     role: "Machine Learning Scientist"
     location: "Boston, MA"
     dates: "Oct 2023 – Apr 2024"
-    summary: "Joined as the third ML researcher post-seed, owning quantification models and company-wide data QC standards."
+    summary: "Joined as the third ML researcher post-seed, building a physics-grounded model for absolute analyte quantification that beat the industry standard by 20% across the full metabolite panel. Set company-wide QC standards and automated filtering that removed 30% of corrupted samples."
 
   - org: "Ford Motor Company"
     logo: ford.png
     role: "Machine Learning Research Scientist"
     location: "Detroit, MI"
     dates: "Jan 2022 – Jun 2023"
-    summary: "Generative models for materials discovery, synthetic data for perception, and graph neural networks for battery materials."
+    summary: "Research spanning various domains of AI for science: generative materials discovery loops, geometric deep learning over atomic structure, and battery health monitoring. Additional work in autonomous vehicles on object detection under nighttime lens flare conditions."
 
   - org: "ExxonMobil Research & Engineering"
     logo: exxonmobil.png
     role: "Process Modeling & Simulation Engineer"
     location: "Houston, TX"
     dates: "Aug 2018 – Jun 2020"
-    summary: "Compositional kinetic and thermal modeling to support refinery sites globally, providing process estimates, troubleshooting advice, and optimization studies. Led a hydroprocessing reactor revamp, modeling catalytic deactivation on heavy feeds to predict catalyst life, delivering $60M in savings."
+    summary: "Compositional kinetic and thermal modeling to support refinery sites globally, providing process estimates, troubleshooting advice, and optimization studies. Led reactor revamp and catalyst life studies that delivered $60M in savings."
 
 education:
   - school: "University of Wisconsin - Madison"

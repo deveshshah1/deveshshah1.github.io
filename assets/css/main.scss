@@ -535,7 +535,7 @@ html {
   display: grid;
   grid-template-columns: 72px 1fr;
   gap: 0.15em 0.9em;
-  padding-bottom: 1.6em;
+  padding-bottom: 2.2em;
 
   /* connecting line between logos */
   &:not(:last-child)::before {
@@ -556,10 +556,17 @@ html {
 /* A later role at the same employer: no logo, no repeated company name, so the
    line runs the full height instead of starting below a logo */
 .timeline__item--cont {
-  margin-top: -0.9em;
+  /* Pulls back most of the gap above, so roles at one employer stay grouped
+     more tightly than separate employers are spaced apart */
+  margin-top: -1.5em;
 
   &:not(:last-child)::before {
     top: 0;
+  }
+
+  /* No company name here, so the job title is already the first line */
+  .timeline__dates {
+    padding-top: 0;
   }
 }
 
@@ -583,7 +590,11 @@ html {
 .timeline__dates {
   grid-row: 1;
   grid-column: 2;
-  align-self: center;
+  align-self: start;
+  /* Drop past the company name so the date sits against the job title. The org
+     line is 1.45em tall in body text; this element is 0.8em, so one line of it
+     is 1.45 / 0.8 of the date's own em. */
+  padding-top: 1.8125em;
   color: $muted-text-color;
   font-family: $sans-serif-narrow;
   font-size: 0.8em;
