@@ -17,6 +17,6 @@ My key research interests include:
 - *Automated discovery loops:* Closing the loop between generative models, simulation, and experiment so that systems can propose and test their own candidates.
 - *Machine learning for engineering and hardware:* Applying modern ML methods to process, mechanical, and hardware problems where classical modeling still dominates.
 
-Above all, I am motivated by difficult problems with the potential for positive impact, and by the opportunity to learn something new along the way. My background across engineering, chemistry, materials science, and machine learning has made me more interested in the problem than the domain itself. Chemistry, biology, physics, or something I have not worked in before — if the problem is interesting, I am interested.
+Above all, I am motivated by difficult problems with the potential for positive impact, and by the opportunity to learn something new along the way. My diverse background across various disciplines has made me more interested in the problem than the domain itself. Chemistry, biology, physics, or something I have not worked in before — if the problem is interesting, I am interested.
 
 Always happy to connect and chat!
