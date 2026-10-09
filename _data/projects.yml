@@ -25,6 +25,14 @@
     - label: Paper
       url: https://arxiv.org/abs/2605.08618
 
+- title: "GPT-2 from Scratch in PyTorch"
+  description: "A from-scratch implementation of GPT-2 in PyTorch Lightning, pretrained on FineWeb-Edu. Implements both the full 124M-parameter model architecture and a smaller 30M-parameter model. Includes evaluation scripts on HellaSwag."
+  image: gpt2-from-scratch.jpg
+  tags: [LLMs, Pretraining]
+  links:
+    - label: Code
+      url: https://github.com/deveshshah1/GPT2_FromScratch
+
 - title: "Analyzing Localization Abilities of Vision Transformers"
   description: "Extends Grad-CAM beyond CNNs to vision transformers and to the object detection domain, the first work to do so to our knowledge. Compares where ResNet, DeiT, YOLOv3, and DETR attend when classifying and detecting objects."
   image: vit-attention.jpg
